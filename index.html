@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday ❤️</title>
+    <meta name="theme-color" content="#ff6aa2" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <!-- LOCK SCREEN -->
+      <section id="lockScreen" class="card" aria-labelledby="lockTitle">
+        <div class="badge" aria-hidden="true">🎂</div>
+        <h1 id="lockTitle">A tiny surprise</h1>
+        <p class="sub">Enter the 8-digit code to unlock your birthday message.</p>
+
+        <form id="pinForm" class="pinForm" autocomplete="off" novalidate>
+          <label class="srOnly" for="pinInput">8-digit code</label>
+          <input
+            id="pinInput"
+            class="pinInput"
+            type="password"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="8"
+            minlength="8"
+            placeholder="••••••••"
+            aria-describedby="pinHelp pinError"
+            autocomplete="one-time-code"
+            required
+          />
+          <div id="pinHelp" class="help">Tip: it’s 8 digits.</div>
+          <div id="pinError" class="error" role="status" aria-live="polite"></div>
+
+          <button class="btn" type="submit">Unlock</button>
+        </form>
+
+        <div class="tiny">
+          Made with ❤️ just for you
+        </div>
+      </section>
+
+      <!-- MESSAGE SCREEN -->
+      <section id="messageScreen" class="card hidden" aria-labelledby="msgTitle">
+        <div class="badge" aria-hidden="true">✨</div>
+        <h1 id="msgTitle">Happy Birthday, my love</h1>
+
+        <p class="message">
+          Today is all about you. Thank you for being my favorite person, my best friend,
+          and my home. I’m so proud of you — and so grateful I get to love you.
+        </p>
+
+        <p class="message">
+          I hope this year brings you joy, peace, and a thousand little moments that make you smile.
+        </p>
+
+        <div class="actions">
+          <button id="replayBtn" class="btn secondary" type="button">Replay confetti</button>
+          <button id="lockAgainBtn" class="btn ghost" type="button">Lock again</button>
+        </div>
+
+        <div class="signature">— Love, always 💖</div>
+      </section>
+    </main>
+
+    <!-- Confetti canvas gets created by JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
