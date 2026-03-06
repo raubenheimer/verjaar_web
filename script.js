@@ -1,5 +1,5 @@
 // ======= CHANGE THIS PIN =======
-const CORRECT_PIN = "12345678"; // <-- set your secret 8-digit code here
+const CORRECT_PIN = "19970307"; // <-- set your secret 8-digit code here
 
 const lockScreen = document.getElementById("lockScreen");
 const messageScreen = document.getElementById("messageScreen");
