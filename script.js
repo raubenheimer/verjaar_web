@@ -42,7 +42,7 @@ pinForm.addEventListener("submit", (e) => {
   const pin = onlyDigits(pinInput.value);
 
   if (pin.length !== 8) {
-    pinError.textContent = "Please enter exactly 8 digits.";
+    pinError.textContent = "Tik 8 nommers in!";
     shake(pinInput);
     return;
   }
@@ -50,7 +50,7 @@ pinForm.addEventListener("submit", (e) => {
   if (pin === CORRECT_PIN) {
     showMessage();
   } else {
-    pinError.textContent = "That code isn’t right — try again 💗";
+    pinError.textContent = "Verkeerd probeer weer 💗";
     shake(pinInput);
     pinInput.select?.();
   }
